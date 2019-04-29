@@ -18,6 +18,14 @@ from django.contrib import admin
 from app01 import views
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^index/', views.index),
+    # url(r'^admin/', admin.site.urls),
+
+    url(r'^$', views.index, name='index'),
+    url(r'^login/$', views.login, name='login'),
+    url(r'^book/list/$', views.book_list, name='book_list'),
+    url(r'^book/add/$', views.book_change, name='book_add'),
+    url(r'^book/edit/(\d+)/$', views.book_change, name='book_edit'),
+    url(r'^book/del/(\d+)/$', views.book_del, name='book_del'),
+
+
 ]

@@ -48,6 +48,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'app01.mymiddlewares.Auth',  # 记得注册啊!!!
 ]
 
 ROOT_URLCONF = 'homework01.urls'
@@ -131,5 +132,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [  # 元组或者列表都行   配置要记住啦!!!
-    os.path.join(BASE_DIR,'statics'),
+    os.path.join(BASE_DIR,'static'),
+]
+
+
+# 白名单
+WHITE_LIST = [
+    r'^/login/$',
+    r'^/admin/.*',
 ]

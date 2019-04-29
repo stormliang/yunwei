@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -8,14 +9,13 @@
     <title>index</title>
 
     <!-- Bootstrap -->
-{#    <link rel="stylesheet"#}
-{#          href="/static/bootstrap-3.3.7-dist/css/bootstrap.min.css">#}
 
 
 </head>
 <body>
+<h1 style="color: red">欢迎来到真真图书馆</h1>
+<p><a href="{% url 'book_list' %}">图书列表</a></p>
 
-{#<script src="/static/bootstrap-3.3.7-dist/js/jquery.js}"></script>#}
 
 </body>
 </html>
