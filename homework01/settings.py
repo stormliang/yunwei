@@ -74,13 +74,24 @@ WSGI_APPLICATION = 'homework01.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
+# 修改数据库配置为MySQL
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    'ENGINE': 'django.db.backends.mysql',
+    'NAME':'yunwei',  # 要连接的数据库，连接前需要创建好
+    'USER':'root', # 连接数据库的用户名
+    'PASSWORD':'root', # 连接数据库的密码
+    'HOST':'127.0.0.1', # 连接主机，默认本级
+    'PORT':3306   #  端口 默认3306
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
